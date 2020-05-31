@@ -27,7 +27,6 @@ def create_client_app():
     open_text = pad(open_text.encode(), 16)
     cipher = encrypt(open_text, session_key)
     sock.send(cipher)
-    print('Encrypted text: ' + str(cipher))
 
     sock.close()
 
